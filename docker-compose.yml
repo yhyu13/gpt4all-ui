@@ -10,6 +10,8 @@ services:
     environment:
       - 'OPENAI_API_KEY=000000000000000'
       - 'OPENAI_API_HOST=http://api:8000'
+      - HTTP_PROXY=http://127.0.0.1:8889
+      - HTTPS_PROXY=http://127.0.0.1:8889
 
   api:
     build: .
@@ -18,4 +20,6 @@ services:
     ports:
       - 8000:8000
     environment:
-      - MODEL=/models/7B/gpt4all-lora-quantized.ggml
+      - MODEL=/models/4B/gpt4all-lora-quantized-ggml.bin
+      - HTTP_PROXY=http://127.0.0.1:8889
+      - HTTPS_PROXY=http://127.0.0.1:8889
