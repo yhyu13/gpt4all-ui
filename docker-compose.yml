@@ -20,6 +20,6 @@ services:
     ports:
       - 8000:8000
     environment:
-      - MODEL=/models/4B/gpt4all-lora-quantized-ggml.bin
+      - MODEL=/models/ggml-vicuna-13b-1.1-q4_0.bin
       - HTTP_PROXY=http://127.0.0.1:8889
       - HTTPS_PROXY=http://127.0.0.1:8889
