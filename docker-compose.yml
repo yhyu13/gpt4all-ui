@@ -17,9 +17,11 @@ services:
     build: .
     volumes:
       - ./models:/models
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
     ports:
       - 8000:8000
     environment:
       - MODEL=/models/ggml-vicuna-13b-1.1-q4_0.bin
+      - DISPLAY=0
       - HTTP_PROXY=http://127.0.0.1:8889
       - HTTPS_PROXY=http://127.0.0.1:8889

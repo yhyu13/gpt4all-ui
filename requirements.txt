@@ -3,3 +3,4 @@ uvicorn
 fastapi
 sse_starlette
 typing_extensions
+dearpygui
